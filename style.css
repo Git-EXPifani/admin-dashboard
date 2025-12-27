@@ -1,3 +1,68 @@
-html {
-  box-sizing: content-box;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "ls rs rs rs rs";
+}
+
+.container .ls-sidebar {
+  grid-area: ls;
+  background-color: #1f8ecd;
+  color: white;
+  padding-top: 10px;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+}
+
+.ls-sidebar > * {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.inline-setting-heading {
+  display: flex;
+  gap: 10px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.inline-setting {
+  padding-left: 7px;
+  display: flex;
+  gap: 20px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.inline-setting-heading > svg {
+  fill: white;
+  width: 50px;
+  height: 50px;
+}
+
+.inline-setting > svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+ul {
+  font-size: 18px;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container .rs {
+  grid-area: rs;
+  background-color: gray;
 }
